@@ -183,7 +183,7 @@ def main():
     summary_all.to_csv(os.path.join(RESULT_DIR, "summary_all.csv"), index=False)
     stats_all.to_csv(os.path.join(RESULT_DIR, "wilcoxon_all.csv"), index=False)
 
-    # 額外做一份「每個 dataset 哪個方法比較好」的簡表
+    
     comparison_rows = []
     for dataset_name in stats_all["dataset"].unique():
         sub = stats_all[stats_all["dataset"] == dataset_name]
